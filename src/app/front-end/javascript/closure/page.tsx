@@ -58,3 +58,29 @@ const Closure: FC = () => {
   );
 };
 export default Closure;
+
+
+interface Counter {
+  increment: () => void;
+  decrement: () => void;
+}
+
+function createCounter(): Counter {
+  let count = 0; // Private variable
+
+  return {
+    increment: function ():void {
+      count++;
+      console.log(count);
+    },
+    decrement: function ():void {
+      count--;
+      console.log(count);
+    },
+  };
+}
+
+const counter = createCounter();
+counter.increment(); // 1
+counter.increment(); // 2
+counter.decrement(); // 1

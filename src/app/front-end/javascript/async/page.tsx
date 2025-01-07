@@ -2,6 +2,8 @@
 import { ChangeEventHandler, FC, useState } from 'react';
 import { debounce } from './debounce';
 import { ResumableInterval } from './resumableTimeInterval';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 
 const AsyncComponent: FC = () => {
   //debounce
@@ -26,45 +28,47 @@ const AsyncComponent: FC = () => {
       <div>
         <p> debounce Text: {debounceText}</p>
       </div>
-      <input
-        className="border border-black"
+      <Input
+        // className="border border-black"
         type="text"
         onChange={onChangeHandler}
+        width={100}
+        className="w-3/12"
       />
       <hr />
       <div>
         <p>here you can track the debounce functionality in the console.</p>
-        <button
+        <Button
           onClick={() => {
             timer.start();
           }}
         >
           start timer
-        </button>
+        </Button>
         <br />
-        <button
+        <Button
           onClick={() => {
             timer.pause();
           }}
         >
           pause timer
-        </button>
+        </Button>
         <br />
-        <button
+        <Button
           onClick={() => {
             timer.resume();
           }}
         >
           resume timer
-        </button>
+        </Button>
         <br />
-        <button
+        <Button
           onClick={() => {
             timer.stop();
           }}
         >
           stop timer
-        </button>
+        </Button>
       </div>
     </>
   );
