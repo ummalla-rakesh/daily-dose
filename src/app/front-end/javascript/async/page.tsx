@@ -1,6 +1,6 @@
 'use client';
 import { ChangeEventHandler, FC, useState } from 'react';
-import { debounce } from './debounce';
+import { debounce } from '../utils/debounce';
 import { ResumableInterval } from './resumableTimeInterval';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
