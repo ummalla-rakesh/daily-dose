@@ -3,11 +3,11 @@ import { FC } from 'react';
 
 /**
  * Implement a function that takes one or more values and returns a function that cycles through those values each time it is called.
- * ex: 
+ * ex:1 
       const helloFn = cycle('hello');
       console.log(helloFn()); // "hello"
       console.log(helloFn()); // "hello"
-
+    ex:2
       const onOffFn = cycle('on', 'off');
       console.log(onOffFn()); // "on"
       console.log(onOffFn()); // "off"
